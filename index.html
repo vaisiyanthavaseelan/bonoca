@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bonoca Eismanufaktur – Handgemachtes Eis in Berlin-Lichterfelde</title>
+<meta name="description" content="Bonoca Eismanufaktur: handgemachtes Eis aus Familientradition in Berlin-Lichterfelde. Sorten, Öffnungszeiten, Anfahrt und Instagram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+  @keyframes bonoca-swipe { 0%, 100% { transform: translateX(0); opacity: 0.6; } 50% { transform: translateX(6px); opacity: 1; } }
+  body { margin: 0; background: oklch(97% 0.015 85); font-family: 'Nunito', sans-serif; color: oklch(32% 0.045 50); overflow-x: hidden; }
+  a { color: inherit; }
+  .fade { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .fade.visible { opacity: 1; transform: translateY(0); }
+  .sorten-desktop { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .sorten-mobile { display: none; flex-direction: column; }
+  @media (max-width: 640px) {
+    .sorten-desktop { display: none; }
+    .sorten-mobile { display: flex; }
+  }
+</style>
+</head>
+<body>
+
+<div>
+
+  <!-- NAV -->
+  <nav style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: clamp(10px,2vw,16px) clamp(16px,4vw,48px); background: oklch(97% 0.015 85 / 0.9); backdrop-filter: blur(6px); border-bottom: 1px solid oklch(85% 0.03 60);">
+    <div style="font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: clamp(20px,2.4vw,26px); color: oklch(45% 0.1 20); display: flex; align-items: center; gap: 8px;">
+      <span style="display:inline-block; width: 30px; height: 30px; border-radius: 50% 50% 50% 0; background: oklch(80% 0.08 140); box-shadow: 0 3px 0 -1px oklch(70% 0.09 20) inset;"></span>
+      Bonoca Eismanufaktur
+    </div>
+    <div style="display: flex; gap: clamp(10px,2vw,22px); flex-wrap: wrap; font-weight: 700; font-size: 15px;">
+      <a href="#ueberuns" style="text-decoration: none; opacity: 0.8;">Über uns</a>
+      <a href="#sorten" style="text-decoration: none; opacity: 0.8;">Sorten</a>
+      <a href="#galerie" style="text-decoration: none; opacity: 0.8;">Galerie</a>
+      <a href="#standort" style="text-decoration: none; opacity: 0.8;">Standort</a>
+      <a href="#kontakt" style="text-decoration: none; opacity: 0.8;">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header style="position: relative; min-height: min(88vh, 780px); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;">
+    <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" aria-label="Zum Instagram-Profil" style="position: absolute; inset: 0; cursor: pointer;">
+      <img src="uploads/IMG_6746.jpeg" alt="Terrasse der Bonoca Eismanufaktur mit Eis-Figuren im Herbst" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </a>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, oklch(20% 0.03 40 / 0.15), oklch(20% 0.03 40 / 0.45)); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 2; max-width: 720px; padding: 24px;">
+      <div style="font-family: 'Fredoka', sans-serif; font-size: clamp(40px, 7vw, 76px); font-weight: 700; color: white; line-height: 1.05; text-shadow: 0 2px 12px oklch(20% 0.03 40 / 0.5);">Bonoca Eismanufaktur</div>
+      <div style="margin-top: 18px; font-size: clamp(18px, 2.4vw, 24px); font-style: italic; font-weight: 600; color: white; text-shadow: 0 2px 10px oklch(20% 0.03 40 / 0.5);">Handgemachtes Eis aus Familientradition</div>
+      <div style="margin-top: 30px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#standort" style="text-decoration: none; background: oklch(55% 0.1 20); color: white; font-weight: 700; padding: 14px 28px; border-radius: 999px; box-shadow: 0 6px 16px oklch(55% 0.1 20 / 0.35);">Öffnungszeiten</a>
+        <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="text-decoration: none; background: white; color: oklch(38% 0.06 30); font-weight: 700; padding: 14px 28px; border-radius: 999px; border: 2px solid oklch(80% 0.05 30);">Zu Instagram</a>
+        <a href="#sorten" style="text-decoration: none; background: oklch(80% 0.08 140); color: oklch(28% 0.06 140); font-weight: 700; padding: 14px 28px; border-radius: 999px; box-shadow: 0 6px 16px oklch(70% 0.09 140 / 0.35);">Zur Speisekarte</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ÜBER UNS -->
+  <section id="ueberuns" class="fade" style="max-width: 980px; margin: 0 auto; padding: clamp(60px,8vw,110px) clamp(20px,5vw,32px); display: flex; gap: clamp(24px,4vw,56px); align-items: center; flex-wrap: wrap;">
+    <div style="flex: 1 1 260px; min-width: 240px; aspect-ratio: 4/5; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 30px oklch(40% 0.05 40 / 0.15);">
+      <img src="uploads/IMG_6748.jpeg" alt="Frisch gezapftes Vanilleeis vor der Bonoca Manufaktur" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    <div style="flex: 2 1 340px; min-width: 280px;">
+      <div style="font-family: 'Fredoka', sans-serif; font-size: clamp(28px,3.2vw,40px); font-weight: 600; color: oklch(45% 0.1 20); margin-bottom: 18px;">Unsere Geschichte</div>
+      <p style="font-size: clamp(16px,1.6vw,19px); line-height: 1.75; margin: 0 0 16px;">Bei uns wird noch von Hand gerührt, probiert und nachgesüßt, bis die Konsistenz stimmt. Bonoca ist ein Familienbetrieb — angefangen hat alles mit der Liebe zum Handwerk und dem Wunsch, Eis so zu machen, wie es früher schmeckte: ehrlich, cremig, ohne Abkürzungen.</p>
+      <p style="font-size: clamp(16px,1.6vw,19px); line-height: 1.75; margin: 0 0 20px;">Seit 3 Jahren stehen wir jeden Tag selbst in der Manufaktur — für Nachbarschaft, Familien und alle, die eine Kugel Ehrlichkeit zu schätzen wissen.</p>
+      <div style="display: inline-flex; align-items: center; gap: 10px; background: oklch(92% 0.05 140); padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: 14px; color: oklch(35% 0.07 140);">
+        <span style="font-size: 16px;">♥</span> Familienbetrieb seit 3 Jahren
+      </div>
+    </div>
+  </section>
+
+  <!-- SORTEN -->
+  <section id="sorten" class="fade" style="background: oklch(93% 0.03 140 / 0.5); padding: clamp(60px,8vw,110px) clamp(20px,5vw,32px);">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 620px; margin: 0 auto 44px; font-size: 17px; opacity: 0.85;">Klassiker, saisonale Kreationen und Optionen für vegane sowie laktosefreie Genießer — alles frisch in unserer Manufaktur hergestellt.</div>
+
+      <div class="sorten-mobile">
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(90% 0.04 90);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30);">Vanille Madagaskar</div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Klassisch cremig mit echter Vanille — der Liebling für Groß und Klein.</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(78% 0.09 140);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30);">Pistazie</div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Geröstete Pistazien, sanft süß, unverkennbar nussig.</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(78% 0.09 20);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30);">Erdbeer-Sahne</div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Frische Erdbeeren, fein abgeschmeckt mit Sahne.</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(45% 0.06 40);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30);">Schoko-Kakao</div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Kräftiger Kakao aus feiner Schokolade, für echte Schoko-Fans.</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(85% 0.08 80);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">Saisonale Kreation <span style="font-size: 11px; font-weight: 700; background: oklch(90% 0.06 100); color: oklch(40% 0.08 80); padding: 2px 8px; border-radius: 999px;">Saisonal</span></div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Wechselnde Sorte je nach Jahreszeit und Laune der Manufaktur.</div></div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid oklch(85% 0.03 140);">
+          <div style="flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: oklch(88% 0.1 90);"></div>
+          <div style="flex: 1;"><div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 17px; color: oklch(38% 0.06 30); display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">Mango-Kokos (vegan) <span style="font-size: 11px; font-weight: 700; background: oklch(90% 0.06 100); color: oklch(40% 0.08 80); padding: 2px 8px; border-radius: 999px;">Vegan</span></div><div style="font-size: 14px; line-height: 1.55; opacity: 0.75; margin-top: 3px;">Fruchtig-cremig auf pflanzlicher Basis, ganz ohne Milch.</div></div>
+        </div>
+      </div>
+
+      <div class="sorten-desktop">
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(90% 0.04 90);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Vanille Madagaskar</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Klassisch cremig mit echter Vanille — der Liebling für Groß und Klein.</div>
+        </div>
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(78% 0.09 140);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Pistazie</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Geröstete Pistazien, sanft süß, unverkennbar nussig.</div>
+        </div>
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(78% 0.09 20);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Erdbeer-Sahne</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Frische Erdbeeren, fein abgeschmeckt mit Sahne.</div>
+        </div>
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(45% 0.06 40);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Schoko-Kakao</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Kräftiger Kakao aus feiner Schokolade, für echte Schoko-Fans.</div>
+        </div>
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(85% 0.08 80);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Saisonale Kreation</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Wechselnde Sorte je nach Jahreszeit und Laune der Manufaktur.</div>
+          <div style="align-self: flex-start; font-size: 12px; font-weight: 700; background: oklch(90% 0.06 100); color: oklch(40% 0.08 80); padding: 4px 10px; border-radius: 999px; margin-top: 4px;">Saisonal</div>
+        </div>
+        <div style="background: white; border-radius: 22px; padding: 26px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08); display: flex; flex-direction: column; gap: 10px;">
+          <div style="width: 44px; height: 44px; border-radius: 50% 50% 50% 4px; background: oklch(88% 0.1 90);"></div>
+          <div style="font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px; color: oklch(38% 0.06 30);">Mango-Kokos (vegan)</div>
+          <div style="font-size: 15px; line-height: 1.6; opacity: 0.85;">Fruchtig-cremig auf pflanzlicher Basis, ganz ohne Milch.</div>
+          <div style="align-self: flex-start; font-size: 12px; font-weight: 700; background: oklch(90% 0.06 100); color: oklch(40% 0.08 80); padding: 4px 10px; border-radius: 999px; margin-top: 4px;">Vegan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANUFAKTUR STREIFEN -->
+  <section class="fade" style="padding: clamp(50px,7vw,90px) 0; background: oklch(30% 0.04 50);">
+    <div style="text-align: center; margin-bottom: 8px; font-family: 'Fredoka', sans-serif; font-size: clamp(26px,3vw,38px); font-weight: 600; color: white;">Frisch aus der Manufaktur</div>
+    <div style="text-align: center; margin-bottom: 20px; font-size: 16px; color: oklch(92% 0.02 85); opacity: 0.85; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      So sieht es aus, kurz bevor die erste Kugel serviert wird
+      <span style="font-size: 13px; opacity: 0.7;">— wischen zum Entdecken</span>
+      <span aria-hidden="true" style="display: inline-block; animation: bonoca-swipe 1.6s ease-in-out infinite;">→</span>
+    </div>
+    <div style="position: relative;">
+      <div style="display: flex; gap: 18px; overflow-x: auto; padding: 4px clamp(20px,5vw,48px) 20px; scroll-snap-type: x mandatory;">
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6753.jpeg" alt="Karamell-Eis frisch gerührt" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6754.jpeg" alt="Cheesecake-Eis mit Karamellsauce" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6755.jpeg" alt="Cookie-Crunch-Eis" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6756.jpeg" alt="Eis verziert mit Schoko-Herzen" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6757.jpeg" alt="Pistazie mit Schokolade" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6759.jpeg" alt="Haselnuss-Eis mit gerösteten Nüssen" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6760.jpeg" alt="Beeren-Sorbet" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        <div style="flex: 0 0 clamp(200px,26vw,300px); aspect-ratio: 3/4; border-radius: 20px; overflow: hidden; scroll-snap-align: start; box-shadow: 0 10px 26px oklch(15% 0.02 40 / 0.4);"><img src="uploads/IMG_6761.jpeg" alt="Lotus-Karamell-Eis" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+      </div>
+      <div aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 20px; width: clamp(30px,6vw,70px); background: linear-gradient(90deg, oklch(30% 0.04 50 / 0), oklch(30% 0.04 50)); pointer-events: none;"></div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="fade" style="padding: clamp(60px,8vw,110px) clamp(20px,5vw,32px); max-width: 1100px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 12px; font-family: 'Fredoka', sans-serif; font-size: clamp(28px,3.2vw,40px); font-weight: 600; color: oklch(45% 0.1 20);">Galerie</div>
+    <div style="text-align: center; margin-bottom: 40px; font-size: 17px; opacity: 0.85;">Impressionen aus der Manufaktur — mehr davon auf <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="color: oklch(45% 0.1 20); font-weight: 700;">@bonoca.manufaktur</a></div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6746.jpeg" alt="Terrasse der Manufaktur" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6747.jpeg" alt="Unsere Eisvitrine" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6748.jpeg" alt="Frisches Eis vor der Manufaktur" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6749.jpeg" alt="Café-Ambiente mit Kaffee und Kuchen" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6750.jpeg" alt="Eisbecher mit Erdbeeren" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="display: block; aspect-ratio: 1; border-radius: 18px; position: relative; overflow: hidden; text-decoration: none;"><img src="uploads/IMG_6751.jpeg" alt="Sortenvielfalt in der Vitrine" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+    </div>
+  </section>
+
+  <!-- STANDORT -->
+  <section id="standort" class="fade" style="background: oklch(94% 0.03 20 / 0.5); padding: clamp(60px,8vw,110px) clamp(20px,5vw,32px);">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 44px; font-family: 'Fredoka', sans-serif; font-size: clamp(28px,3.2vw,40px); font-weight: 600; color: oklch(45% 0.1 20);">Standort &amp; Öffnungszeiten</div>
+      <div style="display: flex; gap: 28px; flex-wrap: wrap;">
+        <a href="https://www.google.com/maps/place/Bonoca+Eismanufaktur+Eiscafe+Eisdiele/@52.4125704,13.3179961,17z" target="_blank" rel="noopener" style="flex: 1 1 380px; min-width: 280px; border-radius: 22px; overflow: hidden; box-shadow: 0 10px 26px oklch(40% 0.05 40 / 0.15); min-height: 320px; display: block; position: relative;">
+          <iframe title="Standort Bonoca Eismanufaktur auf Google Maps" src="https://www.google.com/maps?q=52.4125704,13.320571&z=16&output=embed" width="100%" height="100%" style="border: 0; min-height: 320px; display: block; pointer-events: none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <span style="position: absolute; inset: 0;"></span>
+        </a>
+        <div style="flex: 1 1 300px; min-width: 260px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08);">
+            <div style="font-weight: 700; font-size: 18px; margin-bottom: 8px; color: oklch(38% 0.06 30);">Adresse</div>
+            <div style="font-size: 16px; line-height: 1.6;">Osdorfer Str. 93D<br>12207 Berlin (Lichterfelde)</div>
+            <div style="font-size: 14px; margin-top: 10px; opacity: 0.75;">Anfahrt: gut erreichbar mit Bus &amp; Auto entlang der Osdorfer Straße; Parkmöglichkeiten in der Nähe.</div>
+          </div>
+          <div style="background: white; border-radius: 20px; padding: 24px; box-shadow: 0 8px 22px oklch(40% 0.05 40 / 0.08);">
+            <div style="font-weight: 700; font-size: 18px; margin-bottom: 12px; color: oklch(38% 0.06 30);">Öffnungszeiten</div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Montag</span><span style="font-weight: 700;">12:00 – 19:00</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Dienstag</span><span style="font-weight: 700;">12:00 – 19:00</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Mittwoch</span><span style="font-weight: 700;">12:00 – 19:00</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Donnerstag</span><span style="font-weight: 700;">12:00 – 19:00</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Freitag</span><span style="font-weight: 700;">12:00 – 19:30</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Samstag</span><span style="font-weight: 700;">12:00 – 19:30</span></div>
+            <div style="display: flex; justify-content: space-between; font-size: 15px; padding: 5px 0; border-bottom: 1px solid oklch(93% 0.02 85);"><span>Sonntag</span><span style="font-weight: 700;">12:00 – 19:00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="fade" style="padding: clamp(60px,8vw,110px) clamp(20px,5vw,32px); max-width: 780px; margin: 0 auto; text-align: center;">
+    <div style="font-family: 'Fredoka', sans-serif; font-size: clamp(28px,3.2vw,40px); font-weight: 600; color: oklch(45% 0.1 20); margin-bottom: 14px;">Kontakt &amp; Social</div>
+    <div style="font-size: 17px; opacity: 0.85; margin-bottom: 28px;">Wir freuen uns auf euren Besuch, eure Nachricht oder ein Like auf Instagram.</div>
+    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 30px;">
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="text-decoration: none; display: flex; align-items: center; gap: 10px; background: white; padding: 14px 22px; border-radius: 999px; font-weight: 700; color: oklch(45% 0.1 20); box-shadow: 0 6px 16px oklch(40% 0.05 40 / 0.1);">
+        <span style="width: 22px; height: 22px; border-radius: 7px; border: 2px solid oklch(45% 0.1 20); display: inline-block; position: relative;"><span style="position:absolute; inset:5px; border-radius:50%; border:2px solid oklch(45% 0.1 20);"></span></span> Instagram
+      </a>
+      <a href="https://www.google.com/maps/place/Bonoca+Eismanufaktur+Eiscafe+Eisdiele/@52.4125704,13.3179961,17z" target="_blank" rel="noopener" style="text-decoration: none; display: flex; align-items: center; gap: 10px; background: white; padding: 14px 22px; border-radius: 999px; font-weight: 700; color: oklch(45% 0.1 20); box-shadow: 0 6px 16px oklch(40% 0.05 40 / 0.1);">
+        <span style="width: 18px; height: 18px; border-radius: 50% 50% 50% 0; background: oklch(45% 0.1 20); display: inline-block; transform: rotate(-45deg);"></span> Google Maps
+      </a>
+    </div>
+    <div style="display: grid; gap: 8px; font-size: 15px; opacity: 0.85; margin-bottom: 28px;">
+      <div>Telefon: <a href="tel:+493093629059" style="font-weight: 700;">030 93629059</a></div>
+    </div>
+    <div style="display: inline-flex; align-items: center; gap: 10px; background: oklch(92% 0.05 140); padding: 12px 22px; border-radius: 999px; font-weight: 700; font-size: 15px; color: oklch(35% 0.07 140);">
+      <span>♥</span> Familienbetrieb seit 3 Jahren — mit Liebe in Berlin
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: oklch(30% 0.04 50); color: oklch(92% 0.02 85); padding: 34px clamp(20px,5vw,32px); text-align: center; font-size: 14px;">
+    <div style="margin-bottom: 10px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;">
+      <a href="https://www.instagram.com/bonoca.manufaktur" target="_blank" rel="noopener" style="text-decoration: none; opacity: 0.9;">Instagram</a>
+      <a href="https://www.google.com/maps/place/Bonoca+Eismanufaktur+Eiscafe+Eisdiele/@52.4125704,13.3179961,17z" target="_blank" rel="noopener" style="text-decoration: none; opacity: 0.9;">Google Maps</a>
+      <a href="impressum.html" style="text-decoration: none; opacity: 0.9;">Impressum</a>
+      <a href="datenschutz.html" style="text-decoration: none; opacity: 0.9;">Datenschutz</a>
+    </div>
+    <div style="opacity: 0.75;">© <span id="year"></span> Bonoca Eismanufaktur — Made with ♥ in Berlin</div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade').forEach(function(el) { io.observe(el); });
+</script>
+
+</body>
+</html>
